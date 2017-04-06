@@ -1,0 +1,36 @@
+{
+	"name": "MailingListSignUp",
+	"author": "Leonid Verhovskij",
+	"url": "https://www.mediawiki.org/wiki/Extension:MailingListSignUp",
+	"description": "Parse Tag and insert signup input form for mailinglist",
+	"version": "0.9-beta",
+	"license-name": "GPL-2.0+",
+	"type": "extension",
+	"manifest_version": 1,
+	"AutoloadClasses": {
+		"MailingListSignUp": "MailingListSignUp.class.php"
+	},
+	"config":{
+		"MailingListSignUpURL": "https://zettel.apus.uberspace.de/maillistapi.php",
+		"MailingListSignUpParamsAndMapping":{
+			"type": "type",
+			"list": "list",
+			"mail": "mail",
+			"format": "format"
+		},
+		"MailingListSignUpTypesAndMapping":{
+			"subscribe": "subscribe",
+			"unsubscribe": "unsubscribe"
+		},
+		"MailingListSignUpFormatsAndMapping":{
+			"html": "html",
+			"json": "json"
+		},
+		"MailingListSignUpMethod":"get"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"MailingListSignUp::onParserFirstCallInit"
+		]
+	}
+}
