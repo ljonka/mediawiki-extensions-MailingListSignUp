@@ -18,7 +18,7 @@ class MailingListSignUp {
 		$sMailingListSignUpMethod = $config->get("MailingListSignUpMethod");
 		$sUrl = $sMailingListSignUpURL;
 		return "<form class='' action='".$sMailingListSignUpURL."' method='".$sMailingListSignUpMethod."' target='_blank'>"
-				. "<input type='email' name='".$aMailingListSignUpParamsAndMapping["mail"]."'/>"
+				. "<input type='email' name='".$aMailingListSignUpParamsAndMapping["mail"]."' placeholder='E-Mail'/>"
 				. "<input "
 				. "type='hidden' "
 				. "name='".$aMailingListSignUpParamsAndMapping["type"]."' "
